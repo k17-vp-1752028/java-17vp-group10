@@ -20,6 +20,8 @@ class PatientF0 extends Human{
         this.gender = sc.nextLine();
         System.out.println("Nhập địa chỉ F0: ");
         this.address = sc.nextLine();
+        System.out.println("Nhập quốc tịch:");
+        this.hometown = sc.nextLine();
         System.out.println("Nhập số người mà F0 tiếp xúc: ");
         this.noOfPeople = sc.nextLong(); sc.skip("\n");
         System.out.println("Nhập ngày bắt đầu cách ly của F0: ");
@@ -38,6 +40,7 @@ class PatientF0 extends Human{
         System.out.println("Tuổi F0: " + this.age);
         System.out.println("Giới tính F0: " + this.gender);
         System.out.println("Địa chỉ F0: " + this.address);
+        System.out.println("Quốc tịch: " + this.hometown);
         System.out.println("Số người mà F0 tiếp xúc: " + this.noOfPeople);
         System.out.println("Ngày bắt đầu cách ly của F0: " + this.dateStartQuanrantine);
         System.out.println("Ngày kết thúc cách ly của F0: " + this. dateEndQuanrantine);
