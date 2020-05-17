@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 class PatientF0 extends Human{
     String tag;
+    String hometown;
     long noOfPeople;
     String dateStartQuanrantine;
     String dateEndQuanrantine;
