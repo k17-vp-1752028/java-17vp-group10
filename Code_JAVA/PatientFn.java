@@ -5,6 +5,7 @@ import java.util.Scanner;
 class PatientFN extends Human{
     String tag; // âm tính hoặc dương tính
     long numberOfPeople;
+    String hometown;
     String dateStartQuanrantine;
     String dateEndQuanrantine;
     String healthCondition;
@@ -22,6 +23,8 @@ class PatientFN extends Human{
         this.gender = sc.nextLine();
         System.out.println("Nhập địa chỉ FN: ");
         this.address = sc.nextLine();
+        System.out.println("Nhập quốc tịch");
+        this.hometown = sc.nextLine();
         System.out.println("Nhập tag FN: ");
         this.tag = sc.nextLine();
         System.out.println("Nhập số người mà FN tiếp xúc: ");
@@ -42,6 +45,7 @@ class PatientFN extends Human{
         System.out.println("Tuổi FN: " + this.age);
         System.out.println("Giới tính FN: " + this.gender);
         System.out.println("Địa chỉ FN: " + this.address);
+        System.out.println("Quốc tịch: " + this.hometown);
         System.out.println("Tag FN: " + this.tag);
         System.out.println("Số người mà FN tiếp xúc: " + this.numberOfPeople);
         System.out.println("Ngày bắt đầu cách ly của FN: " + this.dateStartQuanrantine);
