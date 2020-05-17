@@ -52,21 +52,18 @@ class PatientF0 extends Human{
     boolean IsPositive(){
         boolean flag = false;
         switch (this.healthCondition){
-            case "Tốt":
-                tag = "Không nhiễm bệnh.";
+            case "tốt":
+                tag = "không nhiễm bệnh.";
                 flag = true;
                 break;
             case "Khá":
-                tag = "Có nguy cơ nhiễm.";
+                tag = "có nguy cơ nhiễm.";
                 flag = false;
                 break;
-            case "Tệ":
-                tag = "Đã nhiễm";
+            case "tệ":
+                tag = "đã nhiễm";
                 flag = false;
                 break;
-            default:
-                System.out.println("Cần xem xét thêm.");
-                flag = false;
         }
         return flag;
     }
