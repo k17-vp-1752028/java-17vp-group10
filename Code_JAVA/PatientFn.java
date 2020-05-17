@@ -61,21 +61,18 @@ class PatientFN extends Human{
     boolean IsPositive(){
         boolean flag = false;
         switch (this.healthCondition){
-            case "Tốt":
+            case "tốt":
                 tag = "Không nhiễm bệnh.";
                 flag = true;
                 break;
-            case "Khá":
+            case "khá":
                 tag = "Có nguy cơ nhiễm.";
                 flag = false;
                 break;
-            case "Tệ":
+            case "tệ":
                 tag = "Đã nhiễm";
                 flag = false;
                 break;
-            default:
-                System.out.println("Cần xem xét thêm.");
-                flag = false;
         }
         return flag;
     }
@@ -97,15 +94,15 @@ class PatientFN extends Human{
     	System.out.println("Có ba trường hợp tương ứng là có, tiếp xúc trung gian và không.");
     	System.out.println("Người này có tiếp xúc với bệnh nhân số: " + patient.noOfPatient);
         switch (this.healthCondition){
-            case "Có":
+            case "có":
                 tag = "Đưa đi xét nghiệm";
                 flag = true;
                 break;
-            case "Tiếp xúc trung gian":
+            case "tiếp xúc trung gian":
                 tag = "Đưa đi xét nghiệm.";
                 flag = false;
                 break;
-            case "Không":
+            case "không":
                 tag = "Theo dõi 14 ngày";
                 flag = false;
                 break;
