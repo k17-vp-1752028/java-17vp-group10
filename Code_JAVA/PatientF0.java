@@ -53,15 +53,15 @@ class PatientF0 extends Human{
         boolean flag = false;
         switch (this.healthCondition){
             case "tốt":
-                tag = "không nhiễm bệnh.";
+                tag = "Không nhiễm bệnh.";
                 flag = true;
                 break;
-            case "Khá":
-                tag = "có nguy cơ nhiễm.";
+            case "khá":
+                tag = "Có nguy cơ nhiễm.";
                 flag = false;
                 break;
             case "tệ":
-                tag = "đã nhiễm";
+                tag = "Đã nhiễm";
                 flag = false;
                 break;
         }
