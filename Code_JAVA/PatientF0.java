@@ -1,89 +1,70 @@
 package Group_10_OOP;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
-class PatientF0 extends Human{
-    String tag;
-    String hometown;
-    long noOfPeople;
-    String dateStartQuanrantine;
-    String dateEndQuanrantine;
-    String healthCondition;
-    long noOfPatient;
+class PatientF0 extends Group_10_OOP.Human {
+    String name;
+    static int id;
+    int age;
+    String address;
+    String gender;
+    LocalDate dateStartQuarantine;
+    LocalDate dateExpectEndQuarantine;
+    String nationality;
+    String career;
+    String workSpace;
+    String locationHaveGone;
+    int level;
+    int noOfPeople;
+
+
 
     @Override
     void Input() {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập tên người bệnh F0: ");
-        this.name = sc.nextLine();
-        System.out.println("Nhập tuổi F0: ");
-        this.age = sc.nextInt(); sc.skip("\n");
-        System.out.println("Nhập giới tính F0: ");
-        this.gender = sc.nextLine();
-        System.out.println("Nhập địa chỉ F0: ");
-        this.address = sc.nextLine();
-        System.out.println("Nhập quốc tịch:");
-        this.hometown = sc.nextLine();
-        System.out.println("Nhập số người mà F0 tiếp xúc: ");
-        this.noOfPeople = sc.nextLong(); sc.skip("\n");
-        System.out.println("Nhập ngày bắt đầu cách ly của F0: ");
-        this.dateStartQuanrantine = sc.nextLine();
-        System.out.println("Nhập ngày kết thúc cách ly của F0: ");
-        this.dateEndQuanrantine = sc.nextLine();
-        System.out.println("Nhập tình trạng sức khỏe hiện tại của F0: ");
-        this.healthCondition = sc.nextLine();
-        System.out.println("Nhập số thứ tự bệnh nhân: ");
-        this.noOfPatient = sc.nextLong(); sc.skip("\n");
+        System.out.println("Họ tên F0: ");
+        name = sc.nextLine();
+        id++;
+        System.out.println("Tuổi: ");
+        age = sc.nextInt(); sc.skip("\n");
+        System.out.println("Địa chỉ: ");
+        address = sc.nextLine();
+        System.out.println("Giới tính: ");
+        gender = sc.nextLine();
+        System.out.println("Ngày bắt đầu cách ly: ");
+        dateStartQuarantine = LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());//year,month,day
+        System.out.println("Ngày dự định sẽ kết thúc cách ly: ");
+        dateExpectEndQuarantine = LocalDate.of(sc.nextInt(), sc.nextInt(), sc.nextInt());//year,month,day
+        System.out.println("Quốc tịch: ");
+        nationality = sc.nextLine();
+        System.out.println("Nghề nghiệp: ");
+        career = sc.nextLine();
+        System.out.println("Nơi làm việc: ");
+        workSpace = sc.nextLine();
+        System.out.println("Những nơi đã đến trong 1 tháng trước khi phát bệnh: ");
+        locationHaveGone = sc.nextLine();
+        System.out.println("Tình trạng: ");
+        level = sc.nextInt(); sc.skip("\n");
+        System.out.println("Số người đã tiếp xúc: ");
+        noOfPeople = sc.nextInt();
     }
 
     @Override
     void Output() {
-        System.out.println("Tên người bệnh F0: " + this.name);
-        System.out.println("Tuổi F0: " + this.age);
-        System.out.println("Giới tính F0: " + this.gender);
-        System.out.println("Địa chỉ F0: " + this.address);
-        System.out.println("Quốc tịch: " + this.hometown);
-        System.out.println("Số người mà F0 tiếp xúc: " + this.noOfPeople);
-        System.out.println("Ngày bắt đầu cách ly của F0: " + this.dateStartQuanrantine);
-        System.out.println("Ngày kết thúc cách ly của F0: " + this. dateEndQuanrantine);
-        System.out.println("Tình trạng sức khỏe hiện tại của F0: " + this.healthCondition);
-        System.out.println("Số thứ tự bệnh nhân: " + this.noOfPatient);
+        System.out.println("Họ tên F0: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("Tuổi: " + age);
+        System.out.println("Địa chỉ: " + address);
+        System.out.println("Giới tính: " + gender);
+        System.out.println("Ngày bắt đầu cách ly: " + dateStartQuarantine);
+        System.out.println("Ngày dự định sẽ kết thúc cách ly: " + dateExpectEndQuarantine);
+        System.out.println("Quốc tịch: " + nationality);
+        System.out.println("Nghề nghiệp: " + career);
+        System.out.println("Nơi làm việc: " + workSpace);
+        System.out.println("Những nơi đã đến trong 1 tháng trước khi phát bệnh: " + locationHaveGone);
+        System.out.println("Tình trạng: " + level);
+        System.out.println("Số người đã tiếp xúc: " + noOfPeople);
     }
 
-    boolean IsPositive(){
-        boolean flag = false;
-        switch (this.healthCondition){
-            case "tốt":
-                tag = "Không nhiễm bệnh.";
-                flag = true;
-                break;
-            case "khá":
-                tag = "Có nguy cơ nhiễm.";
-                flag = false;
-                break;
-            case "tệ":
-                tag = "Đã nhiễm";
-                flag = false;
-                break;
-        }
-        return flag;
-    }
-
-    String GetHealth(){
-        return this.healthCondition;
-    }
-
-    long NumOfPeople(){
-        return this.noOfPeople;
-    }
-
-    boolean IsQuarantine(){
-        return IsPositive(); //true là không nhiễm, false là đã nhiễm
-    }
-
-    boolean IsEndQuarantine(){
-        if(this.dateEndQuanrantine == "Hết cách ly" && IsPositive())
-            return true; //đc ra
-        else System.out.println("Gia hạn thêm cách ly để theo dõi thêm.");
-        return false;
-    }
 }
