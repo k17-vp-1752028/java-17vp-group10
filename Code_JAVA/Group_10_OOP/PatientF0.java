@@ -1,9 +1,8 @@
 package Group_10_OOP;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
-class PatientF0 extends Group_10_OOP.Human {
+class PatientF0 {
     String name;
     static int id;
     int age;
@@ -18,9 +17,26 @@ class PatientF0 extends Group_10_OOP.Human {
     int level;
     int noOfPeople;
 
+    PatientF0(String na, int ag, String add, LocalDate start, LocalDate end, String nat, String car, String work, String lo, int lev, int num) {
+        name = na;
+        age = ag;
+        address = add;
+        dateStartQuarantine = start;
+        dateExpectEndQuarantine = end;
+        nationality = nat;
+        career = car;
+        workSpace = work;
+        locationHaveGone = lo;
+        level = lev;
+        noOfPeople = num;
+    }
+
+    public PatientF0() {
+
+    }
 
 
-    @Override
+
     void Input() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Họ tên F0: ");
@@ -50,7 +66,7 @@ class PatientF0 extends Group_10_OOP.Human {
         noOfPeople = sc.nextInt();
     }
 
-    @Override
+
     void Output() {
         System.out.println("Họ tên F0: " + name);
         System.out.println("ID: " + id);
