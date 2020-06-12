@@ -35,6 +35,7 @@ class PatientF0 {
 
     }
 
+////////////////////////////////////////////////////////////////
 
 
     void Input() {
@@ -65,6 +66,7 @@ class PatientF0 {
         System.out.println("Số người đã tiếp xúc: ");
         noOfPeople = sc.nextInt();
     }
+////////////////////////////////////////////////////////////////
 
 
     void Output() {

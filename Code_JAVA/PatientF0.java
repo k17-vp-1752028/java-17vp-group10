@@ -19,6 +19,7 @@ class PatientF0 extends Group_10_OOP.Human {
     int noOfPeople;
 
 
+/////////////////////////////////////
 
     @Override
     void Input() {
@@ -49,7 +50,7 @@ class PatientF0 extends Group_10_OOP.Human {
         System.out.println("Số người đã tiếp xúc: ");
         noOfPeople = sc.nextInt();
     }
-
+////////////////////////////////////////////////////////////////
     @Override
     void Output() {
         System.out.println("Họ tên F0: " + name);

@@ -42,6 +42,7 @@ class PatientF0 extends Human{
         System.out.println("Nhập tình trạng sức khỏe hiện tại của F0: ");
         this.healthCondition = sc.nextLine();
     }
+////////////////////////////////////////////////////////////////
 
     @Override
     void Output() {
@@ -55,6 +56,7 @@ class PatientF0 extends Human{
         System.out.println("Ngày kết thúc cách ly của F0: " + this. dateEndQuanrantine);
         System.out.println("Tình trạng sức khỏe hiện tại của F0: " + this.healthCondition);
     }
+////////////////////////////////////////////////////////////////
 
     boolean IsPositive(){
         boolean flag = false;
@@ -77,6 +79,7 @@ class PatientF0 extends Human{
         }
         return flag;
     }
+////////////////////////////////////////////////////////////////
 
     String GetHealth(){
         return this.healthCondition;
@@ -107,6 +110,7 @@ class PatientFN extends Human{
     String dateStartQuanrantine;
     String dateEndQuanrantine;
     String healthCondition;
+////////////////////////////////////////////////////////////////
 
 
     @Override
@@ -131,6 +135,7 @@ class PatientFN extends Human{
         System.out.println("Nhập tình trạng sức khỏe hiện tại của FN: ");
         this.healthCondition = sc.nextLine();
     }
+////////////////////////////////////////////////////////////////
 
     @Override
     void Output() {
@@ -170,6 +175,7 @@ class PatientFN extends Human{
         }
         return flag;
     }
+////////////////////////////////////////////////////////////////
 
     boolean IsQuarantine(){
         return IsPositive(); //true là không nhiễm, false là đã nhiễm

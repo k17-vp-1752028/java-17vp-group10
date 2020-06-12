@@ -1,5 +1,5 @@
 package Group_10_OOP;
-
+//////////////////////////////////////////
 abstract class Human {
     protected String name;
     protected int age;

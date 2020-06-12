@@ -8,6 +8,7 @@ public class main {
 
 
         PatientFN fN = new PatientFN();
+        System.out.println("Nhap: ");
         fN.Input();
         fN.Output();
 

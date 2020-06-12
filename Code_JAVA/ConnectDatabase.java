@@ -17,35 +17,8 @@ public class ConnectDatabase {
 			Connection con = DriverManager.getConnection(connectionUrl, user, pass);
 			System.out.println("connected!!");
 
-			/*String sql = "INSERT INTO info (Ten, SDT, Status)"
-					+ "VALUES ('MINH', '123456789', 'DIE')";
-			
-			Statement st = con.createStatement();
-			int rows = st.executeUpdate(sql);
-			
-			if(rows > 0) {
-				System.out.println("Row has been inserted.");
-			}*/
-			
-			/*
-			String sql = "INSERT INTO info (Ten, SDT, Status)"
-					+ "VALUES (?, ?, ?)";
-					
-			PreparedStatement pst = con.prepareStatement(sql);
-			
-			st.setString(1, "My");
-			st.setString(2, "0967234907");
-			st.setString(3, "NCOVI");
-			
-			int rows = pst.executeUpdate();
-			
-			if(rows > 0) {
-				System.out.println("Row has been inserted.");
-			}
-			*/
-			
-			//==================================================================
-			//==================================================================
+////////////////////////////////////////////////////////////////
+
 			String sql = "SELECT * FROM Personnes";
 			
 			Statement st = con.createStatement();

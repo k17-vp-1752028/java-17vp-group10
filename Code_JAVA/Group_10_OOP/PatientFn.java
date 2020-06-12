@@ -14,6 +14,7 @@ class PatientFn extends PatientF0 {
         super(na, ag, add, start, end, nat, car, work, lo, lev, num);
         relationShip = rel;
     }
+////////////////////////////////////////////////////////////////
 
     void Input(){
         Scanner scanner = new Scanner(System.in);
